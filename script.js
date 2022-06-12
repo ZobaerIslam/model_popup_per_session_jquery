@@ -4,7 +4,15 @@ $(document).ready(function(){
     setTimeout(showModal, 1000);
 
     function showModal(){
-        $("#myModal").show();
+
+        var is_already_show = sessionStorage.getItem('alreadyShow');
+        if(is_already_show != 'already shown') {
+            sessionStorage.setItem("alreadyShow", "already shown");
+            $("#myModal").show();
+        } else {
+            console.log(is_already_show);
+        }
+
     }
 
     $("#closeBtn").click(function(){
