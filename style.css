@@ -12,6 +12,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    /* Hide first time */
+    display: none;
 }
 
 #myModal .modal-top, #myModal .modal-bottom {
